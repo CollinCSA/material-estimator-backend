@@ -3,6 +3,10 @@ from google_sheets import get_all_projects, save_project
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Material Estimator API is running."
+
 @app.route('/projects', methods=['GET'])
 def get_projects():
     return jsonify(get_all_projects())
