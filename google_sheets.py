@@ -8,7 +8,8 @@ TAB_NAME = 'Projects'
 SCOPES = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 
 def authorize():
-    creds = ServiceAccountCredentials.from_json_keyfile_name('creds.json', SCOPES)
+    creds_dict = json.loads(os.environ['GOOGLE_CREDS'])
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, SCOPES)
     client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME).worksheet(TAB_NAME)
     return sheet
