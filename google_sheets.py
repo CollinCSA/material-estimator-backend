@@ -5,7 +5,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # Google Sheet config
-SHEET_NAME = 'Project_Takeoff_DB'
+SHEET_NAME = 'Estimator'
 TAB_NAME = 'Projects'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
 
