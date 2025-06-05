@@ -5,7 +5,7 @@ import datetime
 # Google Sheet config
 SHEET_NAME = 'Project_Takeoff_DB'
 TAB_NAME = 'Projects'
-SCOPES = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
 
 def authorize():
     creds_dict = json.loads(os.environ['GOOGLE_CREDS'])
